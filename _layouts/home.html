@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+          <div class="page-heading">
+            <span class="subheading">Hi from Brazil,</span>
+            <h1>I'm Renan</h1>
+            {% if site.description %}
+            <span class="subheading">I am a User Experience Designer because solving problems is fun.</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 mx-auto">
+        <div class="page-heading"style="text-align:center">
+
+
+
+        {{ content }}
+
+        <!-- Home Post List -->
+        {% for post in site.posts limit : 5 %}
+
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <img src="{{ post.thumbnail }}" alt="" class="img-responsive img-centered" alt="">
+            <h2 class="post-title"style="text-align:center">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle"style="text-align:center">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+          </a>
+
+        </article>
+
+        <hr>
+
+        {% endfor %}
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{"/physical" | relative_url }}">Physical concepts &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </div>

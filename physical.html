@@ -1,0 +1,55 @@
+---
+layout: page
+background: '/img/bg-postp.png'
+title: Physical concepts
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 mx-auto">
+      <div class="page-heading"style="text-align:center">
+
+{% for post in site.physical %}
+
+
+
+<article class="post-preview">
+  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+    <img src="{{ post.thumbnail }}" alt="" class="img-responsive img-centered" alt="">
+    <h2 class="post-title">{{ post.title }}</h2>
+    {% if post.subtitle %}
+    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+    {% else %}
+    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+    {% endif %}
+  </a>
+
+</article>
+
+<hr>
+
+{% endfor %}
+
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+
+<div class="clearfix">
+
+  {% if paginator.previous_page %}
+  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+    Newer<span class="d-none d-md-inline"> Physical</span></a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Physical</span> &rarr;</a>
+  {% endif %}
+
+</div>
+
+{% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>

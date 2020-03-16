@@ -1,0 +1,111 @@
+// Global styling for this template
+body {
+  font-size: 20px;
+  color: $gray-900;
+  @include serif-font;
+}
+
+p {
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.p1 {
+  line-height: 1.5;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.p2 {
+  line-height: 1.5;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+h1{
+  font-weight: 700;
+  @include sans-serif-font;
+}
+h2{
+  font-weight: 700;
+  @include sans-serif-font;
+}
+h3{
+  font-weight: 700;
+  @include sans-serif-font;
+}
+h4{
+  font-weight: 700;
+  @include sans-serif-font;
+}
+h5{
+  font-weight: 700;
+  @include sans-serif-font;
+}
+h6 {
+  font-weight: 700;
+  @include sans-serif-font;
+}
+
+a {
+  color: $gray-900;
+  @include transition-all;
+  &:focus,
+  &:hover {
+    color: $bluehigh;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  color: $blue;
+  font-size: 28px;
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.caption {
+  font-size: 16px;
+  font-style: italic;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $primary;
+  text-shadow: none;
+}
+
+::selection {
+  color: $white;
+  background: $primary;
+  text-shadow: none;
+}
+
+img::selection {
+  color: $white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: $white;
+  background: transparent;
+}
+
+.highlights {
+  background-color: $greenhigh;
+
+}
