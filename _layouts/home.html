@@ -39,7 +39,7 @@ layout: default
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <img src="{{ post.thumbnail }}" alt="" class="img-responsive img-centered" alt="">
+            <img class="img-fluid" src="{{ post.thumbnail }}" alt="" class="img-responsive img-centered" alt="">
             <h2 class="post-title"style="text-align:center">{{ post.title }}</h2>
             {% if post.subtitle %}
             <h3 class="post-subtitle"style="text-align:center">{{ post.subtitle }}</h3>
