@@ -39,6 +39,43 @@ layout: default
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <img class="img-fluid" src="{{ post.thumbnail }}" alt="" class="img-responsive img-centered" alt="">
+            <h2 class="post-title"style="text-align:center">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle"style="text-align:center">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+          </a>
+
+        </article>
+
+        <hr>
+
+        {% endfor %}
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <h3> Would you like to check out some fun ideas? <h3>
+          <a class="btn btn-primary float-right" href="{{"/physical" | relative_url }}">Physical concepts &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+        <div class="page-heading"style="text-align:center">
+
+
+
+        {{ content }}
+
+        <!-- Home Post List -->
+        {% for post in site.posts limit : 5 %}
+
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <img src="{{ post.thumbnail }}" alt="" class="img-fluid" class="img-responsive img-centered" alt="">
             <h2 class="post-title"style="text-align:center">{{ post.title }}</h2>
             {% if post.subtitle %}
