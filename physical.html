@@ -27,14 +27,29 @@ title: Physical concepts
 </article>
 
         <br>
+      
        <hr>
 
-       {% endfor %}
+       {% endfor %}   
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
 
-       <!-- Pager -->
-       <div class="clearfix">
-         <a class="btn btn-primary float-right" href="{{"/" | relative_url }}">Digital work &rarr;</a>
-       </div>
+<div class="clearfix">
+
+  {% if paginator.previous_page %}
+  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+    Newer<span class="d-none d-md-inline"> Physical</span></a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Physical</span> &rarr;</a>
+  {% endif %}
+
+</div>
+
+{% endif %}
+
+      </div>
 
     </div>
   </div>
