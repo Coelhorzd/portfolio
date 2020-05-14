@@ -1,18 +1,14 @@
-title:              Renan R Coelho
+title:              Renan Coelho
 email:              coelhorzd@gmail.com
 description:        UX Design portfolio
-author:             Renan R Coelho
+author:             Renan Coelho
 baseurl:
 url:
-collections:
-  physical:
-    output: true
-    permalink: /physical/:name
 
 # Social Profiles
 twitter_username:
 github_username: 
-facebook_username:
+instagram_username: coelho_rr
 linkedin_username:  coelho-renan
 
 # Add your google-analytics ID here to activate google analytics
